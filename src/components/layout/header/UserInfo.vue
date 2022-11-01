@@ -56,7 +56,7 @@
   
   <script setup lang="ts">
   import {useRouter} from "vue-router";
-  import {onMounted, ref} from "vue";
+  import {onMounted, ref,watchEffect} from "vue";
   import {useUserStore} from "@/stores/user";
   import {storeToRefs} from "pinia";
 
@@ -64,7 +64,7 @@
  
   const router = useRouter()
   
-  const phone = ref('')
+  const username = ref('')
   const password = ref('')
   const {login, checkLogin} = useUserStore()
   const {isLogin, profile, showLogin} = storeToRefs(useUserStore())
@@ -84,13 +84,23 @@
   }
 
   const loginSubmit = () => {
-    login(phone.value, password.value)
+    login(username.value, password.value)
   }
   
   
   onMounted(() => {
     checkLogin()
   })
+
+  watchEffect(()=>{
+	if(!showLogin.value){
+		const container = document.getElementById('container');
+	if(container!=null) {
+		container.classList.remove("right-panel-active");
+	}
+  }
+})
+  
 
   </script>
   

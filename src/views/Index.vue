@@ -1,18 +1,18 @@
 <template>
     <div class="w-screen h-screen flex items-stretch overflow-hidden">
     <div class="w-56 h-screen flex-shrink-0">
-      <!-- <Menu/> -->
+      <Menu/>
     </div>
     <div class="flex-1 flex flex-col ">
       <div class="h-14">
         <Header/>
       </div>
       <div class="flex-1 overflow-hidden">
-        <!-- <ElScrollbar> -->
+        <ElScrollbar>
           <div class="container mx-auto">
-            <!-- <router-view /> -->
+            <router-view />
           </div>
-        <!-- </ElScrollbar> -->
+        </ElScrollbar>
       </div>
       <div class="h-20">
         <!-- <Footer/> -->
@@ -26,6 +26,7 @@
 
 <script lang="ts" setup>
 import Header from '@/components/layout/header/Header.vue'
+import Menu from '@/components/layout/menu/Menu.vue'
 import {  } from 'vue'
 
 

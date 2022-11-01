@@ -15,7 +15,7 @@
         </ElScrollbar>
       </div>
       <div class="h-20">
-        <!-- <Footer/> -->
+        <Footer/>
       </div>
     </div>
 
@@ -27,10 +27,8 @@
 <script lang="ts" setup>
 import Header from '@/components/layout/header/Header.vue'
 import Menu from '@/components/layout/menu/Menu.vue'
-import {  } from 'vue'
-
-
-        
+import Footer from  '@/components/layout/footer/Footer.vue'
+import {  } from 'vue'       
 </script>
 
 <style lang="scss" scoped>
